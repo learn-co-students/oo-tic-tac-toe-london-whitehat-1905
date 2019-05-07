@@ -169,7 +169,6 @@ describe './lib/tic_tac_toe.rb' do
         allow($stdout).to receive(:puts)
         expect(game).to receive(:gets).and_return("5")
         expect(game).to receive(:input_to_index).and_return(4)
-        expect(game).to receive(:valid_move?).and_return(true)
         expect(game).to receive(:current_player).and_return("X")
 
         game.turn
